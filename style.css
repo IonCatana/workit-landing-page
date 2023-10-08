@@ -6,6 +6,12 @@
   font-feature-settings: 'clig' off, 'liga' off;
 }
 
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -15,14 +21,14 @@ a {
 @font-face {
   font-family: 'Manrope';
   font-weight: 400;
-  src: url('./assets/fonts/manrope/static/Manrope-Regular.ttf') format('opentype');
+  src: url('./assets/fonts/manrope/static/Manrope-Regular.ttf') format('truetype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Fraunces 144';
   font-weight: 600;
-  src: url('./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf') format('opentype');
+  src: url('./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -46,7 +52,10 @@ a {
 }
 
 body {
-  display: flex;
+  background-color: grey;
+  position: relative;
+  min-height: 100vh;
+  margin: 0 auto;
   font-family: var(--Manrope);
   color: var(--Dark-Purple);
   font-size: 1.125rem;
@@ -62,6 +71,14 @@ body {
 }
 
 /* Common Rules */
+body,
+header,
+footer,
+main {
+  display: block;
+  width: 100%;
+}
+
 h1,
 h2,
 h3 {
@@ -108,8 +125,7 @@ h3 {
 }
 
 .btn-secondary a {
-  /* color: var(--White, #FFF); */
-  color: red;
+  color: var(--White, #FFF);
   font-family: Manrope;
   font-size: 1.125rem;
   font-style: normal;
@@ -122,7 +138,62 @@ h3 {
 
 .container {
   width: 100%;
-  max-width: var(--Site-Width);
+  max-width: calc((var(--Site-Width) - (154px * 2)));
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header .columns {
+  margin-top: 3.61rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MAIN */
+section#hero {
+  width: 100%;
+}
+
+section#hero .container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  width: 243px;
+  display: flex;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 3px solid var(--Eucaplyptus);
+}
+
+section#hero .title {
+  margin-top: 9.12rem;
+  margin-bottom: ;
+  max-width: 39.6875rem;
+  width: 100%;
+}
+
+section#hero .title * {
+  color: var(--White);
+  text-align: center;
+
 }
