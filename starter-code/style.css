@@ -1,0 +1,58 @@
+/* Reset Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-feature-settings: 'clig' off, 'liga' off;
+}
+
+/* Import Fonts */
+@font-face {
+  font-family: 'Manrope';
+  font-weight: 400;
+  src: url('./assets/fonts/manrope/static/Manrope-Regular.ttf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fraunces 144';
+  font-weight: 600;
+  src: url(./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf) format('opentype');
+  font-display: swap;
+}
+
+/* Global Rules */
+:root {
+  /* Site Width*/
+  --Site-Width: 1440px;
+
+  /* Colors */
+  --Dark-Purple: #24053E;
+  --Eucaplyptus: #44FFA1;
+  --Davys-Grey: #584D62;
+  --Ghost-White: #FCF8FF;
+  --White: #FFF;
+  font-size: 16px;
+  line-height: 1.25;
+
+  /* Typography */
+  --Manrope: 'Manrope', sans-serif;
+  --Fraunces-144pt: 'Fraunces 144', sans-serif;
+}
+
+body {
+  font-family: var(--Manrope);
+  color: var(--Dark-Purple);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+h1 {
+  font-family: var(--Fraunces-144pt);
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 5rem;
+}
